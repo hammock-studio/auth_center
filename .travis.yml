@@ -1,10 +1,15 @@
 language: elixir
 elixir:
-- 1.3.4
+ - 1.3.4
 otp_release:
 - 19.0
+before_deploy:
+  - git checkout . 
+  - git clean -f
 deploy:
+  provider: heroku
   api_key:
     secure: syPzI22Xftz6TSUvoHRFygDcKxaR+Vo6z5RsCWGyuJns0rmSJZIweuQW3tHbwR2Sr4OfSvA19Hl0LdpZNf5jAkGrEvgzGWf5394vp4GgJKzBiEzNLgME1CjqefijghoGQvoiSii5hQudPQ9ji43ahW2EyCM3qKYMBct4mHPXCN19HQ+aXY3b9F8QbBy/2fbG5SenV58LNitUoq82I+Our6mYxACzkhrupb+anRzsa/2781SQbn3NR3d6UjKad3rgDDSIuPGk+CExN4biKaOhdNBwF6+m8vUF8fXksGZHwzuI6HQVAV12LGiL6rK4Du+9npNnUYtCbhqjmQpNhmDvR3oOHrYfISL0w4r8jCC0HtafpWkQcMNra8gqLc7gII9nfTHtGfNcHmuryteDok1+JHR9ShlCcvBL4b/vA/fGeyAcy4wqYMwaM4NsjQTX9ZzVgjBW8u3b+FoPXcz/aahp41W26w5GYm21XTmFLnN+78628bi3VlbhG1sfjH1Gub1II20a7A0Bv1zxkwZjuk5Z1J73TRIObX099cFo1o+5sdwXN4pZCGvsmG+ZgzVrr9k8JX+DNQ9QlKhSZH/nd9KlERnpoMm9q0tDhpGo535AkA/EZ0a0cC4xZMpFcQILBI+iGcjSes4SAIvRTuAC597ny082qgrwDVi2eFPCByA0JF0=
+  app:
     master: auth-center-staging
     release: auth-center
