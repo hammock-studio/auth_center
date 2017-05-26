@@ -22,6 +22,11 @@ defmodule AuthCenter.Router do
     resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
 
+  # :authenticate_user is avilable.
+  # scope "/need_to_authenticate_user", AuthCenter do
+  #    pipe_through [:browser, :authenticate_user]
+  # end
+
   # Other scopes may use custom stacks.
   # scope "/api", AuthCenter do
   #   pipe_through :api
