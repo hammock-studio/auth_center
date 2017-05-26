@@ -4,8 +4,7 @@ elixir:
 otp_release:
 - 19.0
 before_deploy:
-  - git checkout . 
-  - git clean -f
+  - git checkout .
 deploy:
   provider: heroku
   api_key:
