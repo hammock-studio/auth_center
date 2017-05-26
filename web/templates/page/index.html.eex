@@ -1,4 +1,4 @@
 <div class="jumbotron">
   <h2><%= gettext "Welcome to AuthCenter", name: "Phoenix!" %></h2>
-  <p class="lead">OAuth2 integration services with GitHub</p>
+  <p class="lead">OAuth2 integration services with GitHub v1</p>
 </div>
