@@ -36,6 +36,7 @@ defmodule AuthCenter.Web do
 
       import AuthCenter.Router.Helpers
       import AuthCenter.Gettext
+      import AuthCenter.Auth, only: [authenticate_user: 2]
     end
   end
 
@@ -58,6 +59,8 @@ defmodule AuthCenter.Web do
   def router do
     quote do
       use Phoenix.Router
+
+      import AuthCenter.Auth, only: [authenticate_user: 2]
     end
   end
 
