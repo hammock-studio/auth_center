@@ -12,3 +12,5 @@ deploy:
   app:
     master: auth-center-staging
     release: auth-center
+  run:
+    - mix ecto.migrate
