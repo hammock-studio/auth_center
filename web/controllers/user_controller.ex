@@ -31,4 +31,13 @@ defmodule AuthCenter.UserController do
           render(conn, "new.html", changeset: changeset)
     end
   end
+
+  def console_print(conn, %{"you_say" => you_say}) do
+    Email.welcome_html_email("hammock.studio.acc@gmail.com", you_say)
+    |> AuthCenter.Mailer.deliver_now
+
+    IO.puts("what ever: #{you_say}")
+
+    json conn, %{email_sent: true, to: you_say}
+  end
 end

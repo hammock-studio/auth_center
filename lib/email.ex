@@ -9,9 +9,9 @@ defmodule Email do
     |> text_body("Welcome to AuthCenter")
   end
 
-  def welcome_html_email(email_address) do
+  def welcome_html_email(email_address, name) do
     email_address
     |> welcome_text_email()
-    |> html_body("<strong>Welcome<strong> to MyApp Yo Yo!")
+    |> html_body("<strong>Welcome<strong> to #{name}!")
   end
 end

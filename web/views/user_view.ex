@@ -7,4 +7,10 @@ defmodule AuthCenter.UserView do
     |> String.split(" ")
     |> Enum.at(0)
   end
+
+  def username(%User{username: username}) do
+    username
+    |> String.split(" ")
+    |> Enum.at(0)
+  end
 end

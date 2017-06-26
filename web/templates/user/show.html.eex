@@ -1,2 +1,21 @@
 <h1>Showing User</h1>
 <b><%= first_name(@user) %></b> (<%= @user.id %>)
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("http://localhost:4000/api/test/current username missing", function(data, status){
+      alert("Data: " + JSON.stringify(data) + "\nStatus: " + status);
+    });
+  });
+});
+  </script>
+</head>
+
+<body>
+
+  <button>Send Email</button>
+
+</body>
