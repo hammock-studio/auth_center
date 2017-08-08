@@ -14,4 +14,6 @@ defmodule Email do
     |> welcome_text_email()
     |> html_body("<strong>Welcome<strong> to #{name}!")
   end
+
+# def resend email do revoke token; welcome_html_email end
 end

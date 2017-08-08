@@ -1,3 +1,13 @@
+# UserAuthentication
+Flow: 
+1. user registration write test to see what going on inside
+2. default "verified user" on User schema is false
+3. send verification email with link
+4. api endpoint in the app of verifing the user token after clicked in the email
+5. the api endpoint change the "verified user" in the User schema to true
+6. in the auth.ex controller / main user validation. if user is registerd and
+   not yet verified tell him with a banner and offer to resend email.
+
 # AuthCenter
 
 To start your Phoenix app:

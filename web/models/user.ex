@@ -6,6 +6,7 @@ defmodule AuthCenter.User do
     field :username, :string
     field :password, :string, virtual: true
     field :password_hash, :string
+    # field :verified_user, :bool
 
     timestamps
   end
