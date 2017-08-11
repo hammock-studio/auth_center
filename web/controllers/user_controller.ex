@@ -32,6 +32,10 @@ defmodule AuthCenter.UserController do
     end
   end
 
+  def confirmed_email(conn, whatever) do
+
+  end
+
   def console_print(conn, %{"you_say" => you_say}) do
     Email.welcome_html_email("hammock.studio.acc@gmail.com", you_say)
     |> AuthCenter.Mailer.deliver_now

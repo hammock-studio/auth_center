@@ -26,6 +26,7 @@ defmodule AuthCenter.Router do
     pipe_through :api
 
     get "/test/:you_say", UserController, :console_print
+    get "/email_confirmation/:token", UserController, :confirmed_email
   end
 
   # :authenticate_user is avilable.

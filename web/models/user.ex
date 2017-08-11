@@ -6,7 +6,8 @@ defmodule AuthCenter.User do
     field :username, :string
     field :password, :string, virtual: true
     field :password_hash, :string
-    # field :verified_user, :bool
+    field :data, :map
+    #field :temp_token, string
 
     timestamps
   end
@@ -27,6 +28,15 @@ defmodule AuthCenter.User do
     |> cast(params, ~w(password), [])
     |> validate_length(:password, min: 6, max: 100)
     |> put_pass_hash()
+  end
+
+  def default_user_data(changeset) do
+    #here all the default setup for user 
+    # *confirmed email, status, whatever..
+    # *by default the email_confirmation is false
+    #
+
+    # change(changeset, %{ data: %{foo: "bar"}})
   end
 
   defp put_pass_hash(changeset) do
