@@ -1,7 +1,8 @@
 # UserAuthentication
-Flow: 
-1. user registration write test to see what going on inside
-2. default "verified user" on User schema is false
+Flow:
+1. user registration write test to see what going on inside [ok]
+2. default "verified user" on User schema is false [ok]
+2. research: how token mgmt working in the db?
 3. send verification email with link
 4. api endpoint in the app of verifing the user token after clicked in the email
 5. the api endpoint change the "verified user" in the User schema to true
